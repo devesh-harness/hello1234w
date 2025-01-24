@@ -12,7 +12,7 @@ metadata:
     gitlab.com/project-id: 43877214lmmmmmmmmmmmm
     jira/project-key: IDPddsfdsfsdfsfsf
     jenkins.io/github-folder: CDS-68313
-    firehydrant.com/service-name: pythonergwgwegwegwe
+    firehydrant.com/service-name: pythonergwgwegwegwe11111
     backstage.io/kubernetes-label-selector: app=idp-ui
     backstage.io/kubernetes-namespace: 63feee14cbf66e3c798c4bdc
     github.com/project-slug: vigneswara-propelo/python-pipeline-samples
