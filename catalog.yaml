@@ -10,7 +10,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/devesh-harness/python-pipeline-samples/tree/patch-3/
     backstage.io/techdocs-ref: dir:.
     gitlab.com/project-id: 43877214dddddddddddd
-    jira/project-key: IDP
+    jira/project-key: IDPddsfdsfsdfsfsf
     jenkins.io/github-folder: CDS-68313
     firehydrant.com/service-name: python-pipeline-samples
     backstage.io/kubernetes-label-selector: app=idp-ui
