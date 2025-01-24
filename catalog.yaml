@@ -1,31 +1,47 @@
-apiVersion: harness.io/v1
+apiVersion: backstage.io/v1alpha1
 kind: Component
-type: service
-identifier: devesh-catalog
-name: devesh-catalog
-owner: harness_account_all_users
-spec:
-  lifecycle: production
-  providesApi: !!set
-    api:idp-service-api: null
-  providesApis:
-  - idp-Service-api
 metadata:
+  namespace: default
   annotations:
+    backstage.io/managed-by-location: url:https://github.com/devesh-harness/python-pipeline-samples/tree/patch-3/catalog-info.yaml
+    backstage.io/managed-by-origin-location: url:https://github.com/devesh-harness/python-pipeline-samples/blob/patch-3/catalog-info.yaml
+    backstage.io/view-url: https://github.com/devesh-harness/python-pipeline-samples/tree/patch-3/catalog-info.yaml
+    backstage.io/edit-url: https://github.com/devesh-harness/python-pipeline-samples/edit/patch-3/catalog-info.yaml
+    backstage.io/source-location: url:https://github.com/devesh-harness/python-pipeline-samples/tree/patch-3/
     backstage.io/techdocs-ref: dir:.
-    gitlab.com/project-id: '43877214'
+    gitlab.com/project-id: 43877214cccccc
     jira/project-key: IDP
     jenkins.io/github-folder: CDS-68313
     firehydrant.com/service-name: python-pipeline-samples
     backstage.io/kubernetes-label-selector: app=idp-ui
     backstage.io/kubernetes-namespace: 63feee14cbf66e3c798c4bdc
     github.com/project-slug: vigneswara-propelo/python-pipeline-samples
-    harness.io/pipelines: |
-      Build: https://stress.harness.io/ng/account/px7xd_BFRCi-pfWPYXVjvw/home/orgs/default/projects/idptestharness/pipelines/cipipelinetest_sto/pipeline-studio/?storeType=INLINE
-    harness.io/services: |
-      cd: https://stress.harness.io/ng/account/px7xd_BFRCi-pfWPYXVjvw/cd/orgs/default/projects/idptestharness/services/testservice
+    harness.io/pipelines: >
+      Build:
+      https://laxmiharness.pr2.harness.io/ng/account/6cBjZs_fTWCiRITqFyRrgQ/module/ci/orgs/default/projects/IDP/pipelines/TestUpdateCatalog/pipeline-studio/?storeType=INLINE
     grafana/dashboard-selector: (tags @> 'prometheus' || tags @> 'blackbox')
-    pagerduty.com/service-id: PNISOWY
-    backstage.io/source-location: url:https://qa.harness.io/ng/account/px7xd_BFRCi-pfWPYXVjvw/module/code/repos/agniva_test_repository/files/main/~/
+    pagerduty.com/service-id: PT5ED69
+  name: sdgsdgsdgdsgsdgsddg
   tags:
-  - automation
+    - python-test
+  uid: fe103da5-70e9-4554-bff7-04f3637a9fd5
+  etag: ad584aa63f4f9301f227b22a89469bb86e0e6ed0
+relations:
+  - type: ownedBy
+    targetRef: group:default/harness_account_all_users
+    target:
+      kind: group
+      namespace: default
+      name: harness_account_all_users
+  - type: providesApi
+    targetRef: api:default/idp-service-api
+    target:
+      kind: api
+      namespace: default
+      name: idp-service-api
+spec:
+  type: service
+  lifecycle: experimental
+  owner: harness_account_all_users
+  providesApis:
+    - idp-Service-api
