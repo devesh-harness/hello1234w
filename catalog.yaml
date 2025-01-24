@@ -26,19 +26,6 @@ metadata:
     - python-test
   uid: fe103da5-70e9-4554-bff7-04f3637a9fd5
   etag: ad584aa63f4f9301f227b22a89469bb86e0e6ed0
-relations:
-  - type: ownedBy
-    targetRef: group:default/harness_account_all_users
-    target:
-      kind: group
-      namespace: default
-      name: harness_account_all_users
-  - type: providesApi
-    targetRef: api:default/idp-service-api
-    target:
-      kind: api
-      namespace: default
-      name: idp-service-api
 spec:
   type: service
   lifecycle: experimental
