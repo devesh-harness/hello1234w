@@ -21,7 +21,7 @@ metadata:
       https://laxmiharness.pr2.harness.io/ng/account/6cBjZs_fTWCiRITqFyRrgQ/module/ci/orgs/default/projects/IDP/pipelines/TestUpdateCatalog/pipeline-studio/?storeType=INLINE
     grafana/dashboard-selector: (tags @> 'prometheus' || tags @> 'blackbox')
     pagerduty.com/service-id: PT5ED69
-  name: sdgsdgsdgdsgsdgsddg
+  name: devesh-test
   tags:
     - python-test
     - python123
