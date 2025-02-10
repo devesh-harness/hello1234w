@@ -11,7 +11,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     gitlab.com/project-id: 43877214l
     jira/project-key: IDP
-    jenkins.io/github-folder: CDS-68313wwefwef
+    jenkins.io/github-folder: CDS-000
     firehydrant.com/service-name: pythonergw
     backstage.io/kubernetes-label-selector: app=idp-ui00000
     backstage.io/kubernetes-namespace: 63feee14cbf66e3c798c4bdc
