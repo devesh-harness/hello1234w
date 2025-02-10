@@ -9,7 +9,7 @@ metadata:
     backstage.io/edit-url: https://github.com/devesh-harness/python-pipeline-samples/edit/patch-3/catalog-info.yaml
     backstage.io/source-location: url:https://github.com/devesh-harness/python-pipeline-samples/tree/patch-3/
     backstage.io/techdocs-ref: dir:.
-    gitlab.com/project-id: 43877214ljjjjjjj
+    gitlab.com/project-id: 43877214lvvvvvv
     jira/project-key: IDPccccccdddd
     jenkins.io/github-folder: CDS-00099999xxx
     firehydrant.com/service-name: pythonergw
