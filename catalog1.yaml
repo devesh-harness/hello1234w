@@ -4,7 +4,7 @@ metadata:
   namespace: default
   annotations:
     backstage.io/techdocs-ref: dir:.
-    gitlab.com/project-id: wwererr
+    gitlab.com/project-id: wwererrqwdqwdqwdqwd
     jira/project-key: IDP
     jenkins.io/github-folder: CDS-00099999xxxvvvccc
     firehydrant.com/service-name: pytho1122
