@@ -20,7 +20,6 @@ metadata:
   tags:
     - python-test
     - python123
-    - pythonxyz
 spec:
   type: service
   lifecycle: experimental
