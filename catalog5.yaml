@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  namespace: default/prj/org
+  namespace: default_proj_org
   annotations:
     backstage.io/techdocs-ref: dir:.
     gitlab.com/project-id: wwereq
