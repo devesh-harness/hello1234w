@@ -8,7 +8,7 @@ spec:
   providesApis:
     - idp-service
   dependsOn:
-    - Component:ng-manager
+    - Component:account.orgid.projectid123/ng-manager
 apiVersion: "backstage.io/v1alpha1"
 metadata:
   namespace: account.orgid.projectid
