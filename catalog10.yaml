@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  namespace: account.orgid.projectid
+  namespace: account.orgid.projectid123
   annotations:
     backstage.io/managed-by-location: url:https://harness0.harness.io/ng/account/l7B_kbSEQD2wjrM7PShm5w/all/code/orgs/PROD/projects/Harness_Commons/repos/harness-service-catalog-manifests/files/main/~/harness-services/Service/CDSPL/ng-manager.yaml
     backstage.io/managed-by-origin-location: url:https://harness0.harness.io/ng/account/l7B_kbSEQD2wjrM7PShm5w/all/code/orgs/PROD/projects/Harness_Commons/repos/harness-service-catalog-manifests/files/main/~/harness-services/Service/CDSPL/ng-manager.yaml
