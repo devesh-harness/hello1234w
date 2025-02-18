@@ -13,7 +13,7 @@ apiVersion: "backstage.io/v1alpha1"
 metadata:
   namespace: account.orgid.projectid
   name: "idp-service"
-  description: IDP backend service
+  description: IDP backend service111111
   tags: [java]
   links:
     - title: GitHub Repo
