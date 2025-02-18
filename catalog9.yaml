@@ -3,7 +3,7 @@ kind: "Component"
 spec:
   type: "Service"
   lifecycle: "production"
-  owner: "idpbackend"
+  owner: groups:account/idpbackend
   system: "idp"
   providesApis:
     - idp-service
