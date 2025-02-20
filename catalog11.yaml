@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: large-image-service
+  description: A sample service with an image larger than 20 MB
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - url: https://sample-videos.com/img/Sample-jpg-image-30mb.jpg
+      title: Large Image (20MB+)
+      icon: image
+spec:
+  type: service
+  owner: team-example
+  lifecycle: production
