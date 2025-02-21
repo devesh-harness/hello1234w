@@ -21,8 +21,6 @@ metadata:
     - python-test
     - python123
 spec:
-  type: abc
-  lifecycle: experimental
-  owner: harness_account_all_users
-  providesApis:
-    - idp-Service-api
+  type: service
+  owner: team-example
+  lifecycle: production
