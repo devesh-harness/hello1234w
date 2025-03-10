@@ -30,6 +30,6 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: group:default/harness_account_all_users
+  owner: admin
   providesApis:
     - idp-Service-api
