@@ -30,6 +30,6 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: admin
+  owner: user:default/admin
   providesApis:
     - idp-Service-api
