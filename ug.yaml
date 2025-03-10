@@ -1,10 +1,6 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  annotations:
-    backstage.io/managed-by-location: url:https://app.harness.io/Group/default/_account_all_users
-    backstage.io/managed-by-origin-location: url:https://app.harness.io/Group/default/_account_all_users
-    backstage.io/view-url: https://app.harness.io/Group/default/_account_all_users
   name: ug
   namespace: default
   title: All Account Users
