@@ -3,12 +3,12 @@ kind: Group
 metadata:
   name: ug
   namespace: default
-  title: All Account Users
+  title: ug
   created_by: Harness
   uid: e2b874b9-2c3e-4936-9b53-103f2a069391
   etag: def0074ea5f47d560293d3362d08903a274951d3
 spec:
   children: []
   members:
-    - admin@harness.io
+    - user:default/admin
   type: team
