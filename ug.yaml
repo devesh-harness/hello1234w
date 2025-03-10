@@ -10,5 +10,5 @@ metadata:
 spec:
   children: []
   members:
-    - user:default/admin@harness.io
+    - user:default/admin
   type: team
