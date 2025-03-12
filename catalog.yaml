@@ -18,7 +18,7 @@ metadata:
     github.com/project-slug: vigneswara-propelo/python-pipeline-samples
     harness.io/pipelines: >
       Build:
-      https://laxmiharness.pr2.harness.io/ng/account/6cBjZs_fTWCiRITqFyRrgQ/module/ci/orgs/default/projects/IDP/pipelines/TestUpdateCatalog/pipeline-studio/?storeType=INLINE
+      https://deveshharness.pr2.harness.io/ng/account/ffv4xhBKTwugown632slIw/module/ci/orgs/default/projects/testproj/pipelines/pipeidp/pipeline-studio?storeType=INLINE
     grafana/dashboard-selector: (tags @> 'prometheus' || tags @> 'blackbox')
     pagerduty.com/service-id: PT5ED69
   name: devesh-test
