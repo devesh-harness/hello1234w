@@ -1,0 +1,65 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: Create-Harness-Code-Repository1
+  title: Create Harness Code Repository1
+  description: Template for triggering Harness Code repository creation
+  tags:
+    - harness
+    - repository
+spec:
+  owner: idp@harness.io
+  type: service
+  parameters:
+    - title: Trigger Create Repository
+      properties:
+        repoName:
+          title: Repository Name
+          type: string
+          description: The name of the repository in camelCase format. (eg:- userAge, totalAmount, userName)
+        ownedBy:
+          title: Owner
+          type: string
+          description: The owner of the repository.
+        description:
+          title: Description
+          type: string
+          description: Brief description of the repository.
+        git_ignore:
+          title: Git Ignore Template
+          type: string
+          default: Java
+          description: Git ignore template (e.g., Java).
+        default_branch:
+          title: Default Branch
+          type: string
+          default: main
+          description: The default branch of the repository.
+        ticketID:
+          title: Ticket ID
+          type: string
+          description: Associated ticket ID.
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Trigger Repository Creation
+      action: trigger:harness-custom-pipeline
+      input:
+        url: 'https://harness0.harness.io/ng/account/l7B_kbSEQD2wjrM7PShm5w/module/ci/orgs/PROD/projects/Harness_Commons/pipelines/createRepo/executions?storeType=INLINE'
+        inputset:
+          repoName: ${{ parameters.repoName }}
+          ownedBy: ${{ parameters.ownedBy }}
+          description: ${{ parameters.description }}
+          git_ignore: ${{ parameters.git_ignore }}
+          default_branch: ${{ parameters.default_branch }}
+          ticketID: ${{ parameters.ticketID }}
+        apikey: ${{ parameters.token }}
+        showOutputVariables: true
+  output:
+    links:
+      - title: Created Repository - ${{ steps.trigger.output.git_url }}       
+        url: ${{ steps.trigger.output.git_url }}        
