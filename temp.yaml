@@ -1,0 +1,35 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  namespace: default
+  name: test-automation
+  title: Trigger a simple pipeline
+  description: An template for the scaffolder that triggers a simple pipeline
+  tags:
+    - pipeline
+    - harness
+  uid: 45341e49-95b4-4a63-8a43-7bb62a30e38a
+  etag: 813239b2b42360dc65d2db24305396f20ce77347
+spec:
+  owner: user:default/aashrit.garg
+  type: service
+  parameters:
+    properties:
+      token:
+        title: Harness Token
+        type: string
+        ui:widget: password
+        ui:field: HarnessAuthToken
+  steps:
+    - id: trigger
+      name: Simple Pipeline with wait step
+      action: trigger:harness-custom-pipeline
+      input:
+        url: https://qa.harness.io/ng/account/Vp0XSI5MSgiF9p8lIIpThg/module/cd/orgs/default/projects/automation/pipelines/TemplateAutomation/pipeline-studio?storeType=INLINE
+        inputset:
+          project_name: test
+        apikey: ${{ parameters.token }}
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}
