@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  annotations:
+    backstage.io/managed-by-location: url:https://app.harness.io/Resource/default/rwefef
+    backstage.io/managed-by-origin-location: url:https://app.harness.io/Resource/default/rwefef
+    backstage.io/view-url: https://app.harness.io/Resource/account/rwefef
+  name: rwefef
+  namespace: default
+  title: rwefef
+  tags:
+    - java
+  uid: 4f7d44cb-6bbf-446f-a910-dcceec7db798
+  etag: 0510cfbdfec2c8a67b9280c7890ab9f912336d9c
+spec:
+  lifecycle: production
+  type: wefewf
+  owner: group:idpbackend
