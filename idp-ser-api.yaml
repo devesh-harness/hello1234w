@@ -9,7 +9,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: idmbackend
+  owner: idpbackend
   definition: |
     openapi: 3.0.3
     x-stoplight:
