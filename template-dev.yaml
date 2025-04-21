@@ -8,7 +8,7 @@ metadata:
     - access
     - harness
 spec:
-  owner: idp@harness.io
+  owner: idpbackend
   type: service
   parameters:
     - title: Harness Details
