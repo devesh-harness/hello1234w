@@ -1,0 +1,100 @@
+---
+kind: "Component"
+spec:
+  type: "Service"
+  lifecycle: "production"
+  owner: "cdplayacc"
+  system: "cd"
+  providesApis:
+    - ng-manager
+apiVersion: "backstage.io/v1alpha1"
+metadata:
+  name: ng-manager
+  description: Harness NextGen Manager
+  tags: [java]
+  links:
+    - title: Repo
+      url: https://github.com/harness/harness-core
+    - title: Automation Repo
+      url: https://github.com/wings-software/Automation
+    - title: cds-deployments on Slack
+      url: https://app.slack.com/client/T0KET35U1/C061DQPP0JW
+    - title: CDP Automation Details (NextGen)
+      url: https://harness.atlassian.net/wiki/spaces/QUAL/pages/2005795441/CDP+Automation+Details+NextGen
+    - title: QE_OWNED_DELEGATES (Sheet)
+      url: https://docs.google.com/spreadsheets/d/1DumRFjhh9S0JNilFHXk43MkdqNObXQS4tHD5YqwvH_E/edit?pli=1#gid=0
+    - title: CDP-Oncall - Quality and Sign off Responsibilities
+      url: https://harness.atlassian.net/wiki/spaces/QUAL/pages/21007696304/CDP-Oncall+-+Quality+and+Sign+off+Responsibilities
+    - title: CDP-NG Zephyr Testcases
+      url: https://harness.atlassian.net/projects/CDS?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page#!/v2/testCases?projectId=10320
+    - title: CDP-NG Triaging (Sheet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/Provision_QA_Delegates/input-sets/?storeType=INLINE
+    - title: CDP-NG API QA Pipeline
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/pipeline-studio/?storeType=INLINE
+    - title: CDP-NG API Pipeline - InputSets
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/input-sets/?storeType=INLINE
+    - title: Trigger Only P0 Tests on QA ( Select QA_P0 InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/all/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/input-sets/qa_p0?storeType=INLINE
+    - title: Trigger Only P0+P1 Tests on QA ( Select QA_P0_P1 InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/all/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/input-sets/qa_p0_p1?storeType=INLINE
+    - title: Trigger All (P0, P1 , P2 , P3) Tests on QA ( Select QA_NORMAL InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/all/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/input-sets/qa?storeType=INLINE
+    - title: Trigger Only K8s Suite ( 1, 2 , 3 , 4) Tests on QA ( Select k8s_suite_1_2_3_4_Run InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS/input-sets/k8s_suite_1_2_3_4_Run?storeType=INLINE
+    - title: CDP-NG API SMP Pipeline
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS_SMP/pipeline-studio?storeType=INLINE
+    - title: CDP-NG API SMP Pipeline - InputSets
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS_SMP/input-sets/?storeType=INLINE
+    - title: Trigger All (P0, P1 , P2 , P3) Tests on SMP ( Select SMP_CDP_NG_API InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS_SMP/input-sets/SMP_CDP_NG_API?storeType=INLINE
+    - title: Trigger All (P0, P1 , P2 , P3) Tests on Devspaces ( Select DEVSPACES_cdpngautomation InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS_SMP/input-sets/DEVSPACES_cdpngautomation?storeType=INLINE
+    - title: Trigger All (P0, P1 , P2 , P3) Tests on QA0 ( Select QA0 InputSet)
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/CDP_NG_API_TESTS_SMP/input-sets/QA0?storeType=INLINE
+    - title: Provision QA Delegates Pipeline
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/Provision_QA_Delegates/pipeline-studio?storeType=INLINE
+    - title: Provision QA Delegates Pipeline - InputSets
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/cd/orgs/QE_Team/projects/Quality_Assurence/pipelines/Provision_QA_Delegates/input-sets/?storeType=INLINE
+    - title: cdp-ng-api-tests-execution (Slack) to Post Test Results
+      url: https://app.slack.com/client/T0KET35U1/C05F1T8T15H
+    - title: CDP-NG Golden Master Pipeline
+      url: https://qa.harness.io/ng/account/OgiB4-xETamKNVAz-wQRjw/home/orgs/Ng_Pipelines_K8s_Organisations/projects/DoNotDelete_GoldenPipelines2/pipelines/Master_GoldenPipeline/pipeline-studio/?storeType=REMOTE&connectorRef=CDQEPipelines&repoName=cdng-qe-pipleines&branch=main
+    - title: CDP-NG Golden Master Pipeline - InputSets
+      url: https://qa.harness.io/ng/account/OgiB4-xETamKNVAz-wQRjw/home/orgs/Ng_Pipelines_K8s_Organisations/projects/DoNotDelete_GoldenPipelines2/pipelines/Master_GoldenPipeline/input-sets?branch=main&repoName=cdng-qe-pipleines&connectorRef=CDQEPipelines&storeType=REMOTE
+    - title: Prod Sanity
+      url: https://harness.atlassian.net/wiki/spaces/PD/pages/1564901782/CDP+Production+Sanity
+    - title: Prod Sanity (Slack)
+      url: https://app.slack.com/client/T0KET35U1/C0364FZPXEJ
+    - title: Prod - 1 Sanity Pipeline
+      url: https://app.harness.io/ng/#/account/X5Nli8YkQ7exfGftTn26yw/cd/orgs/OrgForPRODSanity/projects/ProjectForSanityTest/pipelines/DockerK8sPipeline/pipeline-studio/
+    - title: Prod - 1 Sanity CI Job
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/ci/orgs/QE_Team/projects/Quality_Assurence/pipelines/Prod1NGSanity/pipeline-studio
+    - title: Prod - 2 Sanity Pipeline
+      url: https://app.harness.io/ng/#/account/BF2rGtGIR-24B_62z-64DQ/cd/orgs/OrgForPRODSanity/projects/ProjectForSanityTesting/pipelines/DockerK8sPipeline/pipeline-studio/
+    - title: Prod - 2 Sanity CI Job
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/ci/orgs/QE_Team/projects/Quality_Assurence/pipelines/Prod2NGSanity/pipeline-studio
+    - title: Prod - 3 Sanity Pipeline
+      url: https://app3.harness.io/ng/account/q7p1Yuz8Ri-0B40QheF_mQ/cd/orgs/OrgForPRODSanity/projects/ProjectForSanityTest_Prod3/pipelines/DockerK8sPipeline/pipeline-studio/
+    - title: Prod - 3 Sanity CI Job
+      url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/module/ci/orgs/QE_Team/projects/Quality_Assurence/pipelines/Prod3NGSanity/pipeline-studio
+  annotations:
+    harness.io/cd-serviceId: "ngmanager"
+    backstage.io/kubernetes-label-selector: 'app=ng-manager'
+    harness.io/ci-pipelineIds: OpenJdk11UBIFeatureBuildHarnessCore
+    harness.io/projects: FEATUREBUILDS
+    harness.io/project-url: https://app.harness.io/ng/account/vpCkHKsDSxK9_KYfjCTMKA/ci/orgs/default/projects/FEATUREBUILDS/dashboard
+    harness.io/project-url-stage: https://stage.harness.io/ng/account/wFHXHD0RRQWoO8tIZT5YVw/cd/orgs/Harness/projects/Operations/deployments
+    harness.io/projects-stage: Operations,RELEASEMANAGEMENT
+    harness.io/cd-serviceId-stage: ngmanager
+    harness.io/ci-pipelineIds-stage: BuildUBItargetReleaseBranchQA
+    backstage.io/source-location: 'url:https://github.com/harness/harness-core'
+    jira/project-key: CDS
+    pagerduty.com/service-id: PNISOWY
+    grafana/dashboard-selector: "tags @> 'ng-manager' && tags @> 'cd'"
+    grafana/overview-dashboard: 'https://monitoring.harness.io/d/3mQ_KQSIk/ng-manager-http-resources?orgId=1'
+    grafana/alert-label-selector: "tags @> 'module=cd' && tags @> 'team=core'"
+    github.com/project-slug: harness/harness-core
+    sonarqube.org/project-key: portal_bazel_000_399
+  harnessData:
+    qa_version: "1.65"
+    prod_version: "1.64"
