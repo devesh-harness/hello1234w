@@ -1,0 +1,98 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: accessforusers
+  title: Provide access to user
+  description: Workflow for providing read-only access to Harness0 account, org and project
+  tags:
+    - access
+    - harness
+spec:
+  owner: idp@harness.io
+  type: service
+  parameters:
+    - title: Harness Details
+      type: object
+      required:
+        - user_email
+        - account_id
+      properties:
+        account_id:
+          title: Harness Account ID
+          type: string
+          description: Harness account ID where you need access
+          default: l7B_kbSEQD2wjrM7PShm5w
+          ui:readonly: true
+
+        user_email:
+          title: Harness User Email ID
+          type: string
+          description: Harness user email ID who needs access
+
+        token:
+          title: Harness Token
+          type: string
+          ui:widget: password
+          ui:field: HarnessAuthToken
+
+        user_access_type:
+          title: User Access Type
+          type: object
+          properties:
+            access_type:
+              title: Access Type
+              type: string
+              description: Type of user access - account, org, or project
+              enum:
+                - account
+                - org
+                - project
+          required:
+            - access_type
+          dependencies:
+            access_type:
+              oneOf:
+                - properties:
+                    access_type:
+                      enum: [account]
+                - properties:
+                    access_type:
+                      enum: [org]
+                    org_details:
+                      type: object
+                      properties:
+                        provide_org_name:
+                          title: Provide Org Identifier
+                          type: string
+
+                - properties:
+                    access_type:
+                      enum: [project]
+                    org_details:
+                      type: object
+                      properties:
+                        provide_org_name:
+                          title: Provide Org Identifier
+                          type: string
+                    project_details:
+                      type: object
+                      properties:
+                        provide_project_name:
+                          title: Provide Project Identifier
+                          type: string
+  steps:
+    - id: trigger
+      name: Inviting user to account
+      action: trigger:harness-custom-pipeline
+      input:
+        url: 'https://harness0.harness.io/ng/account/l7B_kbSEQD2wjrM7PShm5w/all/orgs/PROD/projects/Harness_Commons/pipelines/grantAccessToUserInAccount/pipeline-studio/?storeType=INLINE'
+        inputset:
+          user_email: ${{ parameters.user_email }}
+          account_id: ${{ parameters.account_id }}
+          org_name: ${{ parameters.user_access_type.org_details.provide_org_name }}
+          project_name: ${{ parameters.user_access_type.project_details.provide_project_name }}
+        apikey: ${{ parameters.token }}   
+  output:
+    links:
+      - title: Pipeline Details
+        url: ${{ steps.trigger.output.PipelineUrl }}  
