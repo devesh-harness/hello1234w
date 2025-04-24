@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: account
+  harness.io/roles: undefined,_account_admin
+  name: deep.sengupta
+  title: deep sengupta
+spec:
+  profile:
+    displayName: deep sengupta
+    email: deep.sengupta@harness.io
+  memberOf: []
