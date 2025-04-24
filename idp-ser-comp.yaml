@@ -4,7 +4,7 @@ spec:
   type: "Service"
   lifecycle: "production"
   owner: "idpbackend"
-  system: "idp"
+  system: "abc"
   providesApis:
     - idp-service
   dependsOn:
